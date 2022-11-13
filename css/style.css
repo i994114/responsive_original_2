@@ -151,6 +151,9 @@ img {
   margin-right: auto;
   padding-top: 80px;
   padding-bottom: 120px; }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 768px; } }
   @media screen and (max-width: 414px) {
     .container {
       width: 100%; } }

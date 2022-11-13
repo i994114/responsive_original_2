@@ -98,7 +98,11 @@ $breakpoints: (
     @content;
   }
 }
-
+@mixin ipad($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
 // ==================================
 // base
 // ==================================
@@ -293,6 +297,9 @@ img {
 // ==================================
 .container {
   width: $site-width;
+  @include ipad() {
+    width: 768px;
+  }
   @include mq() {
     width: 100%;
   }
