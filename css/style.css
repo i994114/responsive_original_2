@@ -254,11 +254,18 @@ img {
         right: -13px; } }
   .panel-group {
     margin-right: -15px; }
+    @media screen and (max-width: 768px) {
+      .panel-group {
+        margin-right: 0; } }
     .panel-group-float {
       overflow: hidden; }
     .panel-group-flex {
       display: flex;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      @media screen and (max-width: 768px) {
+        .panel-group-flex .panel:nth-of-type(3) {
+          margin-right: 0; } }
     .panel-group .panel {
       float: left;
       margin-right: 15px;

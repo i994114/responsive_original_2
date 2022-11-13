@@ -437,12 +437,25 @@ img {
   }
   &-group {
     margin-right: -$space_l;
+    @include ipad() {
+      //course側のネガティブマージンを消す処理
+      margin-right: 0;
+    }
+
     &-float {
       overflow: hidden;
     }
     &-flex {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+      .panel {
+        @include ipad() {
+          &:nth-of-type(3) {
+            margin-right: 0;
+          }
+        } 
+      }
     }
     .panel {
       float: left;
