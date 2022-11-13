@@ -259,6 +259,11 @@ img {
         margin-right: 0; } }
     .panel-group-float {
       overflow: hidden; }
+      @media screen and (max-width: 768px) {
+        .panel-group-float .panel:nth-of-type(4) {
+          margin-right: 0; }
+        .panel-group-float .panel:nth-of-type(8) {
+          margin-right: 0; } }
     .panel-group-flex {
       display: flex;
       flex-wrap: wrap;
@@ -271,6 +276,9 @@ img {
       margin-right: 15px;
       margin-bottom: 15px;
       box-sizing: border-box; }
+      @media screen and (max-width: 768px) {
+        .panel-group .panel {
+          margin-right: 20px; } }
   .panel-staff {
     width: calc(25% - 15px); }
     @media screen and (max-width: 414px) {

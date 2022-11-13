@@ -444,6 +444,16 @@ img {
 
     &-float {
       overflow: hidden;
+      .panel {
+        @include ipad() {
+          &:nth-of-type(4) {
+            margin-right: 0;
+          }
+          &:nth-of-type(8) {
+            margin-right: 0;
+          }
+        }
+      }
     }
     &-flex {
       display: flex;
@@ -460,6 +470,9 @@ img {
     .panel {
       float: left;
       margin-right: $space_l;
+      @include ipad() {
+        margin-right: 20px;
+      }
       margin-bottom: $space_l;
       box-sizing: border-box;
     }
