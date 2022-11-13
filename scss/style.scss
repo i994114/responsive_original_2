@@ -441,10 +441,20 @@ img {
       //course側のネガティブマージンを消す処理
       margin-right: 0;
     }
-
+    @include mq() {
+      margin-right: -$space_l;
+    }
     &-float {
       overflow: hidden;
       .panel {
+        @include mq() {
+          &:nth-of-type(2) {
+            margin-right: 0;
+          }
+          &:nth-of-type(6) {
+            margin-right: 0;
+          }
+        }
         @include ipad() {
           &:nth-of-type(4) {
             margin-right: 0;
